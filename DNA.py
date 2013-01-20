@@ -1,4 +1,4 @@
-#!usr/bin/env python2
+#!/usr/bin/env python
 
 from collections import Counter
 import sys
@@ -7,7 +7,7 @@ order = 'ACGT'
 
 def get_ordered_counts(input):
     counts = Counter(input)
-    return ' '.join(str(counts.get(letter)) for letter in order)
+    return ' '.join(str(counts.get(letter, 0)) for letter in order)
 
 def test():
     test_string = 'AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC'
